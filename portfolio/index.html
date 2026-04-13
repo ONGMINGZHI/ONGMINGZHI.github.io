@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="portfolio.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    </head>
+
+    <body class="bg-gradient-to-br from-blue-100 via-sky-100 to-cyan-200 text-gray-800">
+        <!-- TOGGLES -->
+        <input type="checkbox" id="menuToggle" class="hidden" />
+        <input type="checkbox" id="theme" class="hidden" />
+
+        <!-- NAVBAR -->
+        <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
+            <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+                <h1 class="font-bold text-xl">MyPortfolio</h1>
+
+                <!-- DESKTOP MENU -->
+                <div class="hidden lg:flex space-x-4">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <!-- MOBILE BUTTON -->
+                <label for="menuToggle" class="lg:hidden text-2xl cursor-pointer">☰</label>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div class="mobileMenu hidden flex flex-col items-center bg-white py-4 lg:hidden">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <!-- HOME -->
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-8">
+            <h1 class="text-center font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-700 leading-relaxed">Hi, I'm Ming Zhi !</h1>
+
+            <img src="assets/profile pic.jpg" class="mx-auto mt-4 rounded-full shadow-lg w-32 h-32 object-cover" />
+
+            <p class="mt-4">Aspiring Developer | Creative Thinker</p>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-16 px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+            <p class="max-w-2xl mx-auto leading-relaxed">
+                I am a college student who is learning frontend development. I am currently learning HTML, CSS, Bootstrap and a bit of Tailwind to build responsive and modern websites. <br /><br />
+                I enjoy creating simple and clean UI designs and improving my web development skills step by step. <br /><br />
+                Outside of coding, I like listening to music and exploring creative ideas. My goal is to become better at frontend development and build real-world projects in the future.
+            </p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="py-16 px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Education</h2>
+
+            <div class="relative border-l-4 border-blue-400 max-w-3xl mx-auto">
+                <div class="ml-6 mb-10 card p-4 rounded-xl bg-white">
+                    <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2"></div>
+                    <h3 class="font-bold">Primary School -- (2015 - 2020)</h3>
+                    <p>SJK(C) UNION</p>
+                </div>
+
+                <div class="ml-6 mb-10 card p-4 rounded-xl bg-white">
+                    <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2"></div>
+                    <h3 class="font-bold">Secondary School-- (2021 - 2025)</h3>
+                    <p>SMJK UNION</p>
+                </div>
+
+                <div class="ml-6 card p-4 rounded-xl bg-white">
+                    <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2"></div>
+                    <h3 class="font-bold">College (2026 - 2028)</h3>
+                    <p>FORWARD College</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="py-16 px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+
+            <p class="text-center mb-8 opacity-80">These are some of my frontend exercises & projects (GitHub):</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                <a href="https://github.com/ONGMINGZHI/html-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> HTML Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/css-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> CSS Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/flexbox-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Flexbox Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/selectors-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Selectors Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/Grid-css-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Grid Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/Bootstrap-Exercises" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Bootstrap Exercises </a>
+
+                <a href="https://github.com/ONGMINGZHI/Typography-and-CSS-Positioning-Exercises" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Typography & Positioning </a>
+
+                <a href="https://github.com/ONGMINGZHI/project-sem1" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> Sem 1 Project </a>
+            </div>
+        </section>
+
+        <!-- HOBBIES -->
+        <section id="hobbies" class="py-16 px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Hobbies</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="card bg-white p-4 rounded-xl shadow">
+                    <div class="text-3xl mb-2">🎧</div>
+                    <h3 class="font-bold">Music</h3>
+                    <p class="text-sm opacity-80">Listening to music while studying and coding.</p>
+                    <br />
+                    <a href="https://open.spotify.com/playlist/2bMHYHiw5YLgD1zsa4mlRC?si=DQnwSpyORGWlxevqspPvdw&pi=Rx1dDkFOSe-5w" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                        <i class="bi bi-spotify"></i>
+                        Playlist
+                    </a>
+                </div>
+
+                <div class="card bg-white p-4 rounded-xl shadow">
+                    <div class="text-3xl mb-2">🎬</div>
+                    <h3 class="font-bold">Movies</h3>
+                    <p class="text-sm opacity-80">Watching movies for inspiration and stories.</p>
+                    <br>
+                    <a href="https://www.canva.com/design/DAHFGvlQTD8/J97aA7fKfdmOkBkyml39jg/edit" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                       <i class="bi bi-film"></i>
+                        Movies
+                    </a>
+                </div>
+
+                <div class="card bg-white p-4 rounded-xl shadow">
+                    <div class="text-3xl mb-2">📚</div>
+                    <h3 class="font-bold">Books</h3>
+                    <p class="text-sm opacity-80">Reading to learn new ideas and improve thinking.</p>
+                     <br>
+                    <a href="https://www.ebooks.com/en-my/free?srsltid=AfmBOoptnC7uOTprd5BbBc9SIX5dVP3sKo9LClaOQXYr7CtlQIyFEONP&_c=1" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                       <i class="bi bi-book"></i>
+                       Books
+                    </a>
+                </div>
+
+                <div class="card bg-white p-4 rounded-xl shadow">
+                    <div class="text-3xl mb-2">🧩</div>
+                    <h3 class="font-bold">Puzzles</h3>
+                    <p class="text-sm opacity-80">Solving puzzles to improve problem-solving skills.</p>
+                    <br>
+                <a href="https://github.com/ONGMINGZHI/html-exercise" class="bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-blue-600 transition" target="_blank"> HTML Exercises </a>
+                      <i class="bi bi-puzzle"></i>
+                       Puzzles
+                    </a>
+                </div>
+        </section>
+
+        <!-- FOOTER (CONTACT) -->
+        <footer id="contact" class="py-16 px-6 text-center bg-white/40 backdrop-blur-md border-t border-white/30">
+            <h2 class="text-3xl font-bold mb-6">Contact Me!</h2>
+
+            <p class="mb-6">Feel free to reach out through any of the platforms below</p>
+
+            <div class="flex justify-center gap-8 text-2xl mb-6">
+                <a href="mailto:mingzhi26o@forward.edu.my" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                    <i class="bi bi-envelope"></i>
+                    Email
+                </a>
+                <a href="https://whatsapp.com/dl/" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                    Whatsapp
+                </a>
+                <a href="https://github.com/dashboard" class="flex items-center gap-2 hover:scale-110 transition" target="_blank">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                </a>
+            </div>
+            <div class="mt-8 text-sm opacity-60">© 2026 Ming Zhi | Portfolio Project</div>
+        </footer>
+
+        <!-- DARK MODE BUTTON -->
+        <div class="fixed bottom-5 right-5">
+            <label for="theme" class="bg-black text-white px-4 py-2 rounded-full cursor-pointer"> 🌙 / ☀️ </label>
+        </div>
+    </body>
+</html>

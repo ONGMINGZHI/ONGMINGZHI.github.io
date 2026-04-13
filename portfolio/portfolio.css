@@ -1,0 +1,41 @@
+ section {
+                scroll-margin-top: 90px;
+            }
+/* DARK MODE */
+body:has(#theme:checked) {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* Navbar */
+body:has(#theme:checked) nav {
+    background: rgba(15, 23, 42, 0.8);
+    color: white;
+}
+
+/* Sections & cards */
+body:has(#theme:checked) .card,
+body:has(#theme:checked) section,
+body:has(#theme:checked) footer {
+    background: #1f2937 !important;
+    color: white;
+}
+
+/* Links */
+body:has(#theme:checked) a {
+    color: #93c5fd;
+}
+
+/* Buttons (your project links) */
+body:has(#theme:checked) .bg-blue-500 {
+    background: #1d4ed8 !important;
+}
+
+/* Mobile menu */
+body:has(#theme:checked) .mobileMenu {
+    background: #111827 !important;
+}
+
+#menuToggle:checked ~ nav .mobileMenu {
+    display: flex;
+}

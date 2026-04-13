@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wizarding World Guide~</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Datatype:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet" />
+        <style>
+            a {
+                font-family: "UnifrakturMaguntia", cursive;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .pirata-one-regular {
+                font-family: "Pirata One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+            section {
+                scroll-margin-top: 90px;
+            }
+            body {
+                background-color: #0f172a;
+
+                color: white;
+                font-family: "Roboto", sans-serif;
+            }
+
+            h1 {
+                font-family: "Cinzel", serif;
+                color: #d4af37;
+                font-size: 27px;
+            }
+            h2 {
+                font-family: "Cinzel", serif;
+                color: #d4af37;
+            }
+            .gold {
+                color: #d4af37;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .flip-card {
+                background-color: transparent;
+                width: 100%;
+                height: 200px;
+                border: transparent;
+                perspective: 1000px;
+                margin: 10px;
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .flip-card-front {
+                background-color: #7f3333;
+                color: rgb(4, 4, 4);
+            }
+
+            .flip-card-back {
+                background-color: #d4af37;
+                color: white;
+                transform: rotateY(180deg);
+                padding: 10px;
+                font-family: Cinzel;
+            }
+            .medievalsharp-regular {
+                font-family: "MedievalSharp", cursive;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .lexend-giga {
+                font-family: "Lexend Giga", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+            }
+
+            a:hover {
+                color: black;
+            }
+
+            .previous {
+                background-color: #f1f1f1;
+                color: black;
+                opacity: 50%;
+            }
+
+            .next {
+                background-color: #f1f1f1;
+                color: black;
+                opacity: 50%;
+            }
+
+            .round {
+                border-radius: 50%;
+            }
+            .img-author {
+                border-radius: 10px;
+                width: 200px;
+            }
+            .name {
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+                color: rgb(232, 199, 226);
+            }
+            .describe {
+                font-family: Cinzel;
+                color: #d4af37;
+            }
+            .container-fluid {
+                position: sticky;
+            }
+
+            .book-card {
+                border-radius: 15px;
+                overflow: hidden;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .book-card img {
+                height: 350px;
+                width: 100%;
+            }
+            #bookCarousel .carousel-item {
+                height: auto;
+                padding: 5px 0;
+            }
+            #bookCarousel .carousel -inner {
+                height: auto;
+            }
+            .mobile-book {
+                width: 50%;
+            }
+            .mobile-book .card-content:active .x-1 {
+                opacity: 0.9;
+            }
+            .mobile-book .card-content:active .x-2 {
+                opacity: 0.2;
+            }
+
+            .slider {
+                width: 100%;
+                min-height: 100vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* TRACK */
+            .slides {
+                display: flex;
+                width: 400%;
+                height: 100%;
+                animation: slideMove 25s infinite;
+                transition: ease-in;
+            }
+
+            /* EACH SLIDE */
+            .slide {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                flex-shrink: 0;
+                flex-direction: column;
+            }
+
+            /* IMAGE */
+            .slide img {
+                float: left;
+                padding: auto;
+                max-width: 80%;
+                height: auto;
+            }
+
+            /* TEXT */
+            .text {
+                position: absolute;
+                top: 20%;
+                left: 30%;
+                font-size: 40px;
+                color: white;
+                text-align: left;
+            }
+            @media (max-width: 768px) {
+                .text h1 {
+                    font-size: 1.3rem;
+                }
+                .text p {
+                    font-size: 0.6rem;
+                }
+                .text {
+                    left: 90% !important;
+                    top: auto;
+                    transform: translateX(-80%);
+                    padding: 10px 10px;
+                }
+            }
+            /* ANIMATION */
+            @keyframes slideMove {
+                0% {
+                    transform: translateX(0);
+                }
+                25% {
+                    transform: translateX(-100vw);
+                }
+                50% {
+                    transform: translateX(-200vw);
+                }
+                75% {
+                    transform: translateX(-300vw);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .card {
+                transition: transform 0.3s ease;
+            }
+            .card2 {
+                transition: transform 0.3s ease;
+                transform: scale(0.7);
+            }
+
+            .card:hover {
+                transform: scale(1.08);
+            }
+            .card2:hover {
+                transform: scale(0.9);
+            }
+            .card-content {
+                position: relative;
+                background-color: black;
+            }
+
+            .x-1 {
+                position: absolute;
+                margin: auto;
+                opacity: 0;
+                color: rgb(254, 251, 251);
+                font-size: 20px;
+                text-align: left;
+                padding-top: 30px;
+                padding-left: 10px;
+                transition: opacity 0.3s ease-in;
+                font-weight: bold;
+            }
+
+            .x-2 {
+                width: 580px;
+                height: 850px;
+                display: block;
+                opacity: 1;
+                transition: opacity 0.3s ease-out;
+                object-fit: fill;
+            }
+            .card-content:hover .x-1 {
+                opacity: 70%;
+            }
+            .card-content:hover .x-2 {
+                opacity: 20%;
+            }
+
+            .quicksand {
+                font-family: "Quicksand", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .bg-secondary {
+                width: 40px;
+                text-align: center;
+            }
+            .more-card {
+                border-radius: 20px;
+                transition: 0.4s;
+            }
+
+            .more-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+
+        <div id="navbarContainer" class="container-fluid bg-dark text-white me-auto fixed-top">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <i class="bi bi-magic"></i>
+                    <h1 class="navbar-brand pirata-one-regular me-auto mb-0">Harry Potter</h1>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mt-0">
+                            <li class="nav-item active">
+                                <a href="#home" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#house" class="nav-link">Hogwarts Houses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#author" class="nav-link">The Author</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#book" class="nav-link">Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#movie" class="nav-link">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#character" class="nav-link">Characters</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#more" class="nav-link">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const navLinks = document.querySelectorAll(".nav-link");
+                const navbarCollapse = document.getElementById("navbarNav");
+
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false,
+                        });
+                        bsCollapse.hide();
+                    });
+                });
+            });
+        </script>
+        <audio autoplay loop class="audio">
+            <source src="assets/Hedwig's Theme.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Homepage -->
+
+        <div id="home" class="img-fluid h-150px position-relative">
+            <img class="img-fluid w-100" style="height: 100vh; object-fit: cover" src="https://contentful.harrypotter.com/usf1vwtuqyxm/71J6YPxNauhFABbjHpGluJ/631bd6980b0a430d5b476ef331abb2b5/release_1_hogwarts.png" />
+            <h2 class="position-absolute text-white fw-bold" style="top: 5%; left: 4%; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); font-size: 5rem">
+                Welcome to our webpage <br />
+                Folllow us to the world of Harry Potter
+            </h2>
+        </div>
+
+        <!-- House -->
+        <div id="house" class="section text-center">
+            <div class="container">
+                <h2 class="mb-5 gold">Hogwarts Houses</h2>
+                <p class="lead mb-5">Hover over the house to see its traits and famous students!</p>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assets/Gryffindor-Logo-768x432.png" alt="Gryffindor logo" style="width: 100%; height: 100%" />
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Gryffindor</h1>
+                                        <p>Brave, Daring and Confident.</p>
+                                        <p>Famous students: Harry Potter</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assets/Slytherin-Logo-768x432.png" alt="Slytherin logo" style="width: 100%; height: 100%" />
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Slytherin</h1>
+                                        <p>Ambitious, Clever and Resourceful.</p>
+                                        <p>Famous students: Draco Malfoy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assets/Ravenclaw-Logo-500x281.png" alt="Ravenclaw logo" style="width: 100%; height: 100%" />
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Ravenclaw</h1>
+                                        <p>Intelligent, Creative and Wise.</p>
+                                        <p>Famous students: Luna Lovegood</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assets/Hufflepuff-Logo-768x432.png" alt="Hufflepuff logo" style="width: 100%; height: 100%" />
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Hufflepuff</h1>
+                                        <p>Loyal, kind, and hardworking.</p>
+                                        <p>Famous students: Cedric Diggory</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <div class="container">
+                <h2 class="gold mb-4">Get sorted by the Sorting Hat</h2>
+
+                <p class="mb-4">Take the Wizarding World quiz and discover your Hogwarts house!</p>
+
+                <!-- Button that opens quiz -->
+                <a href="https://harry-potter-house-quiz.org/" target="_blank" class="btn btn-warning btn-lg"> Start the House Quiz </a>
+                <hr style="margin: 50px" />
+            </div>
+
+            <!-- Author -->
+            <section id="author" class="py-5 text-light text-center">
+                <div class="container">
+                    <h2 class="gold mb-4">The Author</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/500px-J._K._Rowling_2010.jpg" alt="image of J.K. Rowling" class="img-author" />
+                    <br /><br />
+                    <h3 class="name">J.K. Rowling</h3>
+                    <p class="describe mt-3">
+                        J.K. Rowling is the British author who created the magical world of Harry Potter . She first imagined the story during a train journey in 1990 and published the first book in 1997 . The Harry Potter series became one of the most successful book series in history,inspiring
+                        movies, games, and millions of fans worldwide.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Book Section -->
+            <section id="book" class="container py-5 m-auto text-center">
+                <h2 class="gold mb-3">Harry Potter Book Series</h2>
+                <a class="m-2" style="font-family: &quot;Courier New&quot;, Courier, monospace" href="https://kvongcmehsanalibrary.wordpress.com/wp-content/uploads/2021/07/harrypotter.pdf" target="_blank">Click here to read the complete series!<i class="bi bi-arrow-left-circle-fill"></i></a>
+
+                <!-- DESKTOP & TABLET GRID -->
+                <div class="row g-4 d-none d-md-flex justify-content-center align-items-stretch">
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-danger">Philosopher's Stone</h5>
+                                    <hr />
+                                    <p>Harry Potter discovers he is a wizard on his 11th birthday and begins his journey at Hogwarts School of Witchcraft and Wizardry.</p>
+                                </div>
+                                <img src="assets/book1.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-primary">Chamber of Secrets</h5>
+                                    <hr />
+                                    <p>Strange attacks begin happening at Hogwarts, turning students into stone. Harry uncovers the legend of the Chamber of Secrets and faces a hidden danger from the past that threatens the entire school.</p>
+                                </div>
+                                <img src="assets/book2.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-info">Prisoner of Azkaban</h5>
+                                    <hr />
+                                    <p>A dangerous prisoner, Sirius Black, escapes from Azkaban prison and is believed to be hunting Harry. As the truth unfolds, Harry learns shocking secrets about his parents and his past.</p>
+                                </div>
+                                <img src="assets/book3.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-primary">Goblet of Fire</h5>
+                                    <hr />
+                                    <p>Harry is unexpectedly entered into the dangerous Triwizard Tournament. While competing in magical challenges, a dark plot begins to rise that changes the wizarding world forever.</p>
+                                </div>
+                                <img src="assets/book4.png" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-warning">Order of the Phoenix</h5>
+                                    <hr />
+                                    <p>As Voldemort’s return is denied by the Ministry of Magic, Harry and his friends secretly form a group to prepare for the coming war while facing new threats inside Hogwarts.</p>
+                                </div>
+                                <img src="assets/book5.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-primary">Half-Blood Prince</h5>
+                                    <hr />
+                                    <p>Harry learns more about Voldemort’s past and the secrets to defeating him. Meanwhile, danger grows stronger as Hogwarts becomes less safe than ever.</p>
+                                </div>
+                                <img src="assets/book6.png" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-warning">Deathly Hallows</h5>
+                                    <hr />
+                                    <p>Harry, Ron, and Hermione leave Hogwarts to search for the remaining Horcruxes. The final battle between good and evil begins, deciding the fate of the wizarding world.</p>
+                                </div>
+                                <img src="assets/book7.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card book-card h-100">
+                            <div class="card-content">
+                                <div class="x-1">
+                                    <h5 class="text-warning">Cursed Child</h5>
+                                    <hr />
+                                    <p>Harry’s son Albus travels back in time with Scorpius Malfoy, changing history and creating dangerous new timelines that threaten the wizarding world.</p>
+                                </div>
+                                <img src="assets/book8.jpg" class="x-2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE CAROUSEL -->
+                <div id="bookCarousel" class="carousel slide1 d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Book 1 -->
+                        <div class="carousel-item active">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Philosopher's Stone</h2>
+                                        <p>Harry Potter discovers he is a wizard on his 11th birthday and begins his journey at Hogwarts School of Witchcraft and Wizardry.</p>
+                                    </div>
+                                    <img src="assets/book1.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Philosopher's Stone</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 2 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Chamber of Secrets</h2>
+                                        <p>Strange attacks begin happening at Hogwarts, turning students into stone. Harry uncovers the legend of the Chamber of Secrets and faces a hidden danger from the past that threatens the school.</p>
+                                    </div>
+                                    <img src="assets/book2.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Chamber of Secrets</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 3 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Prisoner of Azkaban</h2>
+                                        <p>A dangerous prisoner, Sirius Black, escapes from Azkaban prison and is believed to be hunting Harry. As the truth unfolds, Harry learns shocking secrets about his parents and his past.</p>
+                                    </div>
+                                    <img src="assets/book3.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Prisoner of Azkaban</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 4 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Goblet of Fire</h2>
+                                        <p>Harry is unexpectedly entered into the dangerous Triwizard Tournament. While competing in magical challenges, a dark plot begins to rise that changes the wizarding world forever.</p>
+                                    </div>
+                                    <img src="assets/book4.png" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Goblet of Fire</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 5 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Order of the Phoenix</h2>
+                                        <p>As Voldemort’s return is denied by the Ministry of Magic, Harry and his friends secretly form a group to prepare for the coming war while facing new threats inside Hogwarts.</p>
+                                    </div>
+                                    <img src="assets/book5.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Order of the Phoenix</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 6 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Half-Blood Prince</h2>
+                                        <p>Harry learns more about Voldemort’s past and the secrets to defeating him. Meanwhile, danger grows stronger as Hogwarts becomes less safe than ever.</p>
+                                    </div>
+                                    <img src="assets/book6.png" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Half-Blood Prince</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 7 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Deathly Hallows</h2>
+                                        <p>Harry, Ron, and Hermione leave Hogwarts to search for the remaining Horcruxes. The final battle between good and evil begins, deciding the fate of the wizarding world.</p>
+                                    </div>
+                                    <img src="assets/book7.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Deathly Hallows</h5></div>
+                            </div>
+                        </div>
+
+                        <!-- Book 8 -->
+                        <div class="carousel-item">
+                            <div class="card mx-auto book-card mobile-book">
+                                <div class="card-content">
+                                    <div class="x-1">
+                                        <h2>Cursed Child</h2>
+                                        <p>Harry’s son Albus travels back in time with Scorpius Malfoy, changing history and creating dangerous new timelines that threaten the wizarding world.</p>
+                                    </div>
+                                    <img src="assets/book8.jpg" class="x-2" />
+                                </div>
+                                <div class="card-body text-center"><h5>Cursed Child</h5></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </section>
+            <!-- Movies -->
+
+            <section id="movie">
+                <h2 class="gold mt-5 text-center">Top picks</h2>
+                <div class="container-fluid">
+                    <div class="row g-4 d-flex justify-content-center">
+                        <div class="card-1 col-md-4 col-12 d-flex justify-content-center">
+                            <div class="card2">
+                                <div class="card-content w-100 h-100">
+                                    <div class="x-1">
+                                        <h2 class="quicksand">Harry Potter and the Philispher's Stone</h2>
+                                        <hr />
+                                        <p class="quicksand">
+                                            A young orphan named Harry Potter discovers on his 11th birthday that he is a wizard and is invited to attend Hogwarts School of Witchcraft and Wizardry. There, he makes friends, learns magic, and uncovers the mystery of the Philosopher’s Stone—an object
+                                            that grants immortality—while confronting the dark past connected to Lord Voldemort.
+                                        </p>
+                                        <h3 class="quicksand">Cast</h3>
+                                        <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                        <h3 class="quicksand">Maturity Rating</h3>
+                                        <p class="bg-secondary">7+</p>
+                                    </div>
+                                    <img class="x-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttbZNVGzKnwLBGXrKBkt0VY2J2DubjnH_lSQrJCzdSf5fe4OK8yUM27EYhteFc68Ii7Xr9g&s=10" alt="Card image cap" />
+                                </div>
+                                <h3>Harry Potter and the Philispher's Stone</h3>
+                            </div>
+                        </div>
+                        <div class="card1 m-0 col-md-4 col-12 d-flex justify-content-center">
+                            <div class="card2">
+                                <div class="card-content w-100 h-100">
+                                    <div class="x-1">
+                                        <h2 class="quicksand">Harry Potter and the Chamber of Secrets</h2>
+                                        <hr />
+                                        <p class="quicksand">
+                                            In his second year at Hogwarts, Harry hears a mysterious voice that no one else can hear, while students begin turning to stone one by one. As fear spreads, he discovers the legend of the Chamber of Secrets and the monster hidden within it. With the help
+                                            of Ron and Hermione, Harry uncovers the truth behind the attacks and faces a dark force connected to Voldemort’s past.
+                                        </p>
+                                        <h3 class="quicksand">Cast</h3>
+                                        <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), Paapa Essiedu (Snape),Nick Frost (Rubeus Hagrid)</p>
+                                        <h3 class="quicksand">Maturity Rating</h3>
+                                        <p class="bg-secondary">7+</p>
+                                    </div>
+                                    <img class="x-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1rI0fB3GdfQCFT3HYWrIIreGt74rV1R0n8JgYUmXtzMeOCdIKv4MdmSafc0hi7DksbRtO&s=10" alt="Card image cap" />
+                                </div>
+                                <h3>Harry Potter and the Chamber of Secrets</h3>
+                            </div>
+                        </div>
+                        <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                            <div class="card2">
+                                <div class="card-content w-100 h-100">
+                                    <div class="x-1">
+                                        <h2 class="quicksand">Harry Potter and the Prisoner of Azkaban</h2>
+                                        <hr />
+                                        <p class="quicksand">
+                                            Harry learns that Sirius Black, a dangerous prisoner, has escaped from Azkaban and is believed to be after him. As Dementors guard the school, Harry struggles with fear and new magical challenges. The truth about Sirius, however, is far more complex,
+                                            revealing hidden connections to Harry’s parents and changing everything he thought he knew about his past.
+                                        </p>
+                                        <h3 class="quicksand">Cast</h3>
+                                        <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                        <h3 class="quicksand">Maturity Rating</h3>
+                                        <p class="bg-secondary">10+</p>
+                                    </div>
+                                    <img class="x-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgkdZmW7dz8EAUAZ_QfYb_fUa0_Nd4jmHCD6wKjjVIuS4ci-J5ChWg630iacWfrAU9Ko_lng&s=10" alt="Card image cap" />
+                                </div>
+                                <h3>Harry Potter and the Prisoner of Azkaban</h3>
+                            </div>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card2">
+                                    <div class="card-content w-100 h-100">
+                                        <div class="x-1">
+                                            <h2 class="quicksand">Harry Potter and the Goblet of Fire</h2>
+                                            <hr />
+                                            <p class="quicksand">
+                                                Hogwarts hosts the dangerous Triwizard Tournament, where champions from three schools compete in deadly tasks. Although underage, Harry is mysteriously chosen to participate. As he faces dragons, dark waters, and a deadly maze, a sinister plan unfolds
+                                                behind the scenes—leading to the shocking return of Lord Voldemort and a tragic turning point in Harry’s life.
+                                            </p>
+                                            <h3 class="quicksand">Cast</h3>
+                                            <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                            <h3 class="quicksand">Maturity Rating</h3>
+                                            <p class="bg-secondary">10+</p>
+                                        </div>
+                                        <img class="x-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIb7EKKYfM0tX2pE8nrzP-LBo3AiBgLyJN_HuKX7GId7Ca84Ygzf8tTQ-rmcr4SG5Uww08yw&s=10" alt="Card image cap" />
+                                    </div>
+                                    <h3>Harry Potter and the Goblet of Fire</h3>
+                                </div>
+                            </div>
+                            <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card2">
+                                    <div class="card-content w-100 h-100">
+                                        <div class="x-1">
+                                            <h2 class="quicksand">Harry Potter and the Order of the Phoenix</h2>
+                                            <hr />
+                                            <p class="quicksand">
+                                                With Voldemort’s return denied by the Ministry of Magic, Harry is isolated and discredited. At Hogwarts, a strict new authority figure takes control, pushing Harry and his friends to secretly train in defensive magic. As visions connect Harry’s mind to
+                                                Voldemort, the battle between good and evil intensifies, culminating in a dangerous confrontation and a heartbreaking loss.
+                                            </p>
+                                            <h3 class="quicksand">Cast</h3>
+                                            <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                            <h3 class="quicksand">Maturity Rating</h3>
+                                            <p class="bg-secondary">10+</p>
+                                        </div>
+                                        <img class="x-2" src="https://play-lh.googleusercontent.com/13rElAIsjU4P8ZzjmT3QC58uSqiYljg-hup1UcX52bnRVwA_8HFjtvE4DvMu06luiA5-_uqf8rONG0zDxA8" alt="Card image cap" />
+                                    </div>
+                                    <h3>Harry Potter and the Order of the Phoenix</h3>
+                                </div>
+                            </div>
+                            <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card2">
+                                    <div class="card-content w-100 h-100">
+                                        <div class="x-1">
+                                            <h2 class="quicksand">Harry Potter and the Half-Blood Prince</h2>
+                                            <hr />
+                                            <p class="quicksand">
+                                                Harry begins to uncover the history of Voldemort with Dumbledore’s guidance, learning about Horcruxes—the key to defeating him. At the same time, a mysterious potions book labeled “The Half-Blood Prince” helps Harry excel in class. As dark forces grow
+                                                stronger outside Hogwarts, betrayal and tragedy strike, leading to one of the most emotional moments in the series.
+                                            </p>
+                                            <h3 class="quicksand">Cast</h3>
+                                            <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                            <h3 class="quicksand">Maturity Rating</h3>
+                                            <p class="bg-secondary">12+</p>
+                                        </div>
+                                        <img class="x-2" src="https://play-lh.googleusercontent.com/denSMtoxFCMNsDIVDE1gc0VYLZcj3zTip2mrTzH9fXSSrLsBLXk1I4BjlFVlQ5i-dp4rLPRjg_D58jY6xLI=w240-h480-rw" alt="Card image cap" />
+                                    </div>
+                                    <h3>Harry Potter and the Half-Blood Prince</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                            <div class="card2">
+                                <div class="card-content w-100 h-100">
+                                    <div class="x-1">
+                                        <h2 class="quicksand">Harry Potter and the Deathly Hollows-Part 1</h2>
+                                        <hr />
+                                        <p class="quicksand">
+                                            After Harry Potter learns he must destroy pieces of Lord Voldemort’s soul (Horcruxes), he sets out with Ron Weasley and Hermione Granger. With the wizarding world under Voldemort’s control, they live in hiding, struggling with fear, tension, and limited
+                                            clues. Along the way, they discover the mysterious Deathly Hallows—three powerful magical objects tied to mastering death—while their mission becomes increasingly dangerous and uncertain.
+                                        </p>
+                                        <h3 class="quicksand">Cast</h3>
+                                        <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                        <h3 class="quicksand">Maturity Rating</h3>
+                                        <p class="bg-secondary">10+</p>
+                                    </div>
+                                    <img class="x-2" src="https://images.moviesanywhere.com/de6092b467fc299fdf79a51dfa7f9710/12b877a3-28de-46ff-820f-dd8bf07e8edb.jpg" alt="Card image cap" />
+                                </div>
+                                <h3>Harry Potter and the Deathly Hollows-Part 2</h3>
+                            </div>
+                        </div>
+                        <div class="card1 col-md-4 col-12 d-flex justify-content-center">
+                            <div class="card2">
+                                <div class="card-content w-100 h-100">
+                                    <div class="x-1">
+                                        <h2 class="quicksand">Harry Potter and the Order of the Phoenix</h2>
+                                        <hr />
+                                        <p class="quicksand">
+                                            The story returns to Hogwarts, where the final Horcruxes must be destroyed. Harry uncovers hidden truths about his past and his connection to Voldemort. As allies gather, the Battle of Hogwarts erupts, bringing massive losses and heroic sacrifices. In the end, Harry faces Voldemort in a decisive confrontation that determines the fate of the wizarding world.
+                                        </p>
+                                        <h3 class="quicksand">Cast</h3>
+                                        <p class="quicksand">Dominic McLaughlin (Harry), Arabella Stanton (Hermione), Alastair Stout (Ron), Nick Frost (Hagrid), John Lithgow (Dumbledore), Janet McTeer (McGonagall), and Paapa Essiedu (Snape)</p>
+                                        <h3 class="quicksand">Maturity Rating</h3>
+                                        <p class="bg-secondary">10+</p>
+                                    </div>
+                                    <img class="x-2" src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p7953526_p_v8_aa.jpg" alt="Card/mage cap" />
+                                </div>
+                                <h3>Harry Potter and the Order of the Phoenix</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character -->
+            <div id="character"><h2>Character</h2></div>
+            <div class="slider">
+                <div class="slides vh-100">
+                    <div class="slide" style="display: flex; height: 100vh; width: 100vw; background-color: rgb(67, 11, 3); align-items: center">
+                        <div class="slider">
+                            <img src="assets/Harry-Potter-PNG-Background-removebg-preview.png" />
+                            <div class="text position-absolute text-white fw-bold text-left" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); color: #d4af37">
+                                <h1 class="fs-1 lexend-giga text-warning">Harry Potter</h1>
+                                <hr class="border-5 text-warning" />
+                                <p class="medievalsharp-regular fs-2 text-warning" style="font-size: 16px">
+                                    Student of Gryffindor.Harry Potter is a brave young wizard with a lightning-shaped scar. He is known for his courage, loyalty, and strong sense of justice as he faces challenges and protects his friends from danger.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="display: flex; height: 100vh; width: 100vw; background-color: rgb(15, 67, 3); align-items: center">
+                        <div class="slider">
+                            <img src="assets/draco_png.png" class="draco_png" />
+                            <div class="text position-absolute text-white fw-bold text-left" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); color: #d4af37">
+                                <h1 class="fs-1 lexend-giga text-white">Draco Malfoy</h1>
+                                <hr class="border-5" />
+                                <p class="medievalsharp-regular fs-2" style="font-size: 16px">Student of Slytherin.Draco Malfoy is known as an arrogant, wealthy bully, and the son of a Death Eater. He frequently antagonizes Harry, relying on his pure-blood status.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="display: flex; height: 100vh; width: 100vw; background-color: rgb(86, 70, 1); align-items: center">
+                        <div class="slider">
+                            <img src="assets/luna_png.png" />
+                            <div class="text position-absolute text-white fw-bold text-left" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">
+                                <h1 class="fs-1 lexend-giga" style="color: #071878">Luna Lovegood</h1>
+                                <hr class="border-5" style="color: #071878" />
+                                <p class="medievalsharp-regular fs-2" style="font-size: 16px; color: #071878">
+                                    Student of Ravenclaw.Luna Lovegood is an eccentric, dreamy Ravenclaw student known for her unwavering authenticity, "dottiness," and unexpected wisdomloyal,friend to Harry Potter and member of Dumbledore's ArmyHarry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="display: flex; height: 100vh; width: 100vw; background-color: rgb(15, 9, 0); align-items: center">
+                        <div class="slider">
+                            <img src="assets/cedric_png.png" />
+                            <div class="text position-absolute text-white fw-bold text-left" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">
+                                <h1 class="fs-1 lexend-giga" style="color: rgb(209, 209, 4)">Cedric Diggory</h1>
+                                <hr class="border-5" style="color: rgb(209, 209, 4)" />
+                                <p class="medievalsharp-regular fs-2" style="font-size: 16px; color: rgb(209, 209, 4)">Student of Hufflepuff. As a sixth-year Prefect and Quidditch Captain ,Cedric Diggory is a popular Hogwarts champion in the Triwizard Tournamentbefore his tragic death.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- More -->
+        <section id="more" class="container py-5">
+            <h1 class="text-center mb-5">More From The Wizarding World~</h1>
+            <!-- SPELLS -->
+            <h2 class="text-center mt-5 mb-4 quicksand">Famous Spells</h2>
+
+            <div class="row g-4">
+                <div id="myCard1" class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Expelliarmus</h3>
+                        <p>The disarming charm that knocks wands away.</p>
+                    </div>
+                </div>
+                <audio id="mySound" src="assets/Expelliarmus_mp3.mp3"></audio>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const card = document.getElementById("myCard1");
+                        const sound = document.getElementById("mySound");
+                        mySound.volume = 0.7;
+                        let interval;
+
+                        card.addEventListener("mouseover", () => {
+                            sound.pause(); // reset properly
+                            sound.currentTime = 4.7;
+                            sound.play();
+
+                            const stopAt = 6;
+
+                            interval = setInterval(() => {
+                                if (sound.currentTime >= stopAt) {
+                                    sound.pause();
+                                    clearInterval(interval);
+                                }
+                            }, 100);
+                        });
+
+                        card.addEventListener("mouseout", () => {
+                            sound.pause();
+                            sound.currentTime = 0;
+                            clearInterval(interval); // stop checking if mouse leaves
+                        });
+                    });
+                </script>
+
+                <div id="myCard2" class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Expecto Patronum</h3>
+                        <p>Summons a Patronus to protect against Dementors.</p>
+                    </div>
+                </div>
+                <audio id="mySound2" src="assets/Expecto_Patronum.mp3"></audio>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const card = document.getElementById("myCard2");
+                        const sound = document.getElementById("mySound2");
+                        mySound2.volume = 0.2;
+                        let interval;
+
+                        card.addEventListener("mouseover", () => {
+                            sound.pause(); // reset properly
+                            sound.currentTime = 5.6;
+                            sound.play();
+
+                            const stopAt = 8.5;
+
+                            interval = setInterval(() => {
+                                if (sound.currentTime >= stopAt) {
+                                    sound.pause();
+                                    clearInterval(interval);
+                                }
+                            }, 100);
+                        });
+
+                        card.addEventListener("mouseout", () => {
+                            sound.pause();
+                            sound.currentTime = 0;
+                            clearInterval(interval); // stop checking if mouse leaves
+                        });
+                    });
+                </script>
+
+                <div id="myCard3" class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Lumos</h3>
+                        <p>Lights up the tip of the wand.</p>
+                    </div>
+                </div>
+                <audio id="mySound3" src="assets/lumos_maxima.mp3"></audio>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const card = document.getElementById("myCard3");
+                        const sound = document.getElementById("mySound3");
+                        let interval;
+
+                        card.addEventListener("mouseover", () => {
+                            sound.pause(); // reset properly
+                            sound.currentTime = 0;
+                            sound.play();
+
+                            const stopAt = 2;
+
+                            interval = setInterval(() => {
+                                if (sound.currentTime >= stopAt) {
+                                    sound.pause();
+                                    clearInterval(interval);
+                                }
+                            }, 100);
+                        });
+
+                        card.addEventListener("mouseout", () => {
+                            sound.pause();
+                            sound.currentTime = 0;
+                            clearInterval(interval); // stop checking if mouse leaves
+                        });
+                    });
+                </script>
+
+                <div id="myCard4" class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Alohomora</h3>
+                        <p>Unlocks doors and objects.</p>
+                    </div>
+                </div>
+                <audio id="mySound4" src="assets/alohomora.mp3"></audio>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const card = document.getElementById("myCard4");
+                        const sound = document.getElementById("mySound4");
+                        let interval;
+
+                        card.addEventListener("mouseover", () => {
+                            sound.pause(); // reset properly
+                            sound.currentTime = 1;
+                            sound.play();
+
+                            const stopAt = 1.9;
+
+                            interval = setInterval(() => {
+                                if (sound.currentTime >= stopAt) {
+                                    sound.pause();
+                                    clearInterval(interval);
+                                }
+                            }, 100);
+                        });
+
+                        card.addEventListener("mouseout", () => {
+                            sound.pause();
+                            sound.currentTime = 0;
+                            clearInterval(interval); // stop checking if mouse leaves
+                        });
+                    });
+                </script>
+            </div>
+
+            <!-- CREATURES -->
+            <h2 class="text-center mt-5 mb-4 quicksand">Magical Creatures</h2>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Hippogriff</h3>
+                        <p>Proud creature that must be respected before approached.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Phoenix</h3>
+                        <p>A magical bird reborn from its ashes.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>House Elf</h3>
+                        <p>Loyal magical beings who love helping wizards.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Basilisk</h3>
+                        <p>A giant serpent whose gaze is deadly.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- LOCATIONS -->
+            <h2 class="text-center mt-5 mb-4 quicksand">Wizarding Locations</h2>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Hogwarts</h3>
+                        <p>The famous school of witchcraft and wizardry.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Diagon Alley</h3>
+                        <p>Wizard shopping street hidden in London.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Hogsmeade</h3>
+                        <p>The only all-wizard village in Britain.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card more-card h-100 text-center p-3">
+                        <h3>Ministry of Magic</h3>
+                        <p>The governing body of the wizarding world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-black py-4">
+            <div class="container text-center">
+                <h4 class="gold mb-3">Follow the Wizarding World</h4>
+                <p>&copy;2026 Harry Potter.All rights reserved.</p>
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a href="https://www.facebook.com/harrypotter/" target="_blank" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                    <a href="https://x.com/harrypotter" target="_blank" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/harrypotter/?hl=en" target="_blank" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@harrypotter" target="_blank" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
