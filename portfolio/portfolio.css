@@ -1,6 +1,6 @@
- section {
-                scroll-margin-top: 90px;
-            }
+section {
+    scroll-margin-top: 90px;
+}
 /* DARK MODE */
 body:has(#theme:checked) {
     background: #0f172a;
@@ -26,7 +26,7 @@ body:has(#theme:checked) a {
     color: #93c5fd;
 }
 
-/* Buttons (your project links) */
+/* Buttons  */
 body:has(#theme:checked) .bg-blue-500 {
     background: #1d4ed8 !important;
 }
